@@ -4,11 +4,11 @@ import SearchResults from "../../components/SearchResults/SearchResults";
 
 const Search = () => {
   const [books, setBooks] = useState([]);
-  useEffect(() => {
-    setBooks({
-      title: "Test",
-    });
-  }, []);
+  //   useEffect(() => {
+  //     setBooks({
+  //       title: "Test",
+  //     });
+  //   }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -18,9 +18,10 @@ const Search = () => {
         `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}:keyes&key=AIzaSyCVhgXo09d-7bytDAIYMHwCWeBDzDvWvHE`
       )
       .then((res) => {
-        console.log(res.data.items[0].volumeInfo);
+        setBooks(res.data.items);
       });
   }
+
   return (
     <div className="container">
       <div className="container">
@@ -32,7 +33,15 @@ const Search = () => {
           </form>
         </div>
       </div>
-      <SearchResults />
+      {books.map((book) => (
+        <SearchResults
+          title={book.volumeInfo.title}
+          author={book.volumeInfo.authors}
+          image={book.volumeInfo.imageLinks.thumbnail}
+          description={book.volumeInfo.description}
+          link={book.selfLink}
+        />
+      ))}
     </div>
   );
 };
