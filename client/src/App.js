@@ -9,9 +9,9 @@ import Jumbotron from "./components/Jumbotron/Jumbotron";
 
 function App() {
   useEffect(() => {
-    axios.get("/api/config").then((res) => {
-      console.log(res.data);
-    });
+    // axios.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter:keyes&key=AIzaSyCVhgXo09d-7bytDAIYMHwCWeBDzDvWvHE").then((res) => {
+    //   console.log(res.data.items[0].volumeInfo.title);
+    // });
   });
   return (
     <div>
