@@ -1,6 +1,8 @@
 import './App.css';
 import React, {useEffect} from 'react';
 import axios from 'axios';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Home from "./containers/Home/Home";
 
 function App() {
   useEffect(() => {
@@ -10,7 +12,11 @@ function App() {
   });
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <Router>
+        <Switch>
+        <Route exact path="/" component={Home} />
+        </Switch>
+      </Router>
     </div>
   );
 }
