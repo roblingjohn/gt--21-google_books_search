@@ -7,7 +7,6 @@ const Search = () => {
     <div className="container">
       <div className="container">
         <h2>Book Search</h2>
-        <h3>Book</h3>
         <SearchBar />
       </div>
       <SearchResults />
