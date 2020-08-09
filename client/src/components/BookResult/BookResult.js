@@ -7,6 +7,8 @@ const BookResult = (props) => {
       <h4>{props.author}</h4>
       <img src={props.image} alt={props.title} />
       <p>{props.description}</p>
+      <button className="view">View</button>
+      <button className="save">Save</button>
     </div>
   );
 };
