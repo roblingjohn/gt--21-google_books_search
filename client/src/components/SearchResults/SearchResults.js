@@ -1,15 +1,16 @@
 import React from "react";
 import BookResult from "../BookResult/BookResult";
 
-const SearchResults = () => {
+const SearchResults = (props) => {
   return (
     <div className="container">
       <h3>Results</h3>
       <BookResult
-        title="Title"
-        author="Book Author"
-        image="https://www.placecage.com/140/100"
-        description="Book description goes here."
+        title={props.title}
+        author={props.author}
+        image={props.image}
+        description={props.description}
+        link={props.link}
       />
     </div>
   );
