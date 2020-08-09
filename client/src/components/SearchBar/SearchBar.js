@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SearchResults from "../../components/SearchResults/SearchResults";
 
-const Search = () => {
+const SearchBar = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
     setBooks({
@@ -22,19 +21,13 @@ const Search = () => {
       });
   }
   return (
-    <div className="container">
-      <div className="container">
-        <h2>Book Search</h2>
-        <div>
-          <form id="bookSearch" onSubmit={handleSubmit}>
-            <input type="text" name="book" placeholder="Book Name" />
-            <button id="searchBtn">Search</button>
-          </form>
-        </div>
-      </div>
-      <SearchResults />
+    <div>
+      <form id="bookSearch" onSubmit={handleSubmit}>
+        <input type="text" name="book" placeholder="Book Name" />
+        <button id="searchBtn">Search</button>
+      </form>
     </div>
   );
 };
 
-export default Search;
+export default SearchBar;
