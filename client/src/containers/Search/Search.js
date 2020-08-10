@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import SearchResults from "../../components/SearchResults/SearchResults";
 
@@ -33,13 +33,15 @@ const Search = () => {
           </form>
         </div>
       </div>
+      <h3>Results</h3>
       {books.map((book) => (
         <SearchResults
+          id={book.id}
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors}
           image={book.volumeInfo.imageLinks.thumbnail}
           description={book.volumeInfo.description}
-          link={book.selfLink}
+          link={book.accessInfo.webReaderLink}
         />
       ))}
     </div>

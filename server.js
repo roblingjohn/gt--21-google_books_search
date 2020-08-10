@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const booksController = require("./routes/api/books")
 
 const app = express();
 
@@ -17,9 +18,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+app.use("/api", booksController);
+
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/google_books_search", {
