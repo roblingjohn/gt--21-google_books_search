@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Saved from "./containers/Saved/Saved";
