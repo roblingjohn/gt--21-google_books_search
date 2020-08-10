@@ -35,12 +35,12 @@ const Search = () => {
       </div>
       {books.map((book) => (
         <SearchResults
+          id={book.id}
           title={book.volumeInfo.title}
           author={book.volumeInfo.authors}
           image={book.volumeInfo.imageLinks.thumbnail}
           description={book.volumeInfo.description}
-          link={book.selfLink}
-          id={book._id}
+          link={book.accessInfo.webReaderLink}
         />
       ))}
     </div>

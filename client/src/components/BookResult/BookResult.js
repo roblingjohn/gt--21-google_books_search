@@ -1,22 +1,35 @@
 import React from "react";
 import API from "../../utils/API";
+import Link from "react-router-dom";
+
 
 const BookResult = (props) => {
   const handleView = (event) => {
     event.preventDefault();
-    console.log(event.target);
+    window.location.assign(props.link);
   };
 
   const handleSave = (event) => {
     event.preventDefault();
-    API.saveBook({ 
-      id: props.id,
+    console.log({
+      // id: props.id,
       title: props.title,
       author: props.author,
       description: props.description,
       image: props.image,
-      link: props.link
-     }).then(console.log(props));
+      link: props.link,
+    });
+    API.saveBook({
+      _id: props.id,
+      title: props.title,
+      author: props.author,
+      description: props.description,
+      image: props.image,
+      link: props.link,
+    }).then((res) => {
+      console.log(res);
+      res.json();
+    });
   };
 
   return (
