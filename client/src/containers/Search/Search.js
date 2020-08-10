@@ -40,6 +40,7 @@ const Search = () => {
           image={book.volumeInfo.imageLinks.thumbnail}
           description={book.volumeInfo.description}
           link={book.selfLink}
+          id={book._id}
         />
       ))}
     </div>
