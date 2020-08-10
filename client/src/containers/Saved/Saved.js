@@ -16,7 +16,7 @@ const Saved = () => {
       <h2>Saved Books</h2>
       {books.map((book) => (
         <SavedBook
-          id={book.id}
+          id={book._id}
           title={book.title}
           author={book.authors}
           image={book.image}
