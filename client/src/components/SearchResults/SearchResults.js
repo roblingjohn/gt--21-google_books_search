@@ -4,7 +4,6 @@ import BookResult from "../BookResult/BookResult";
 const SearchResults = (props) => {
   return (
     <div className="container">
-      <h3>Results</h3>
       <BookResult
         title={props.title}
         author={props.author}

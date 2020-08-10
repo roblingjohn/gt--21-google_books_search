@@ -33,6 +33,7 @@ const Search = () => {
           </form>
         </div>
       </div>
+      <h3>Results</h3>
       {books.map((book) => (
         <SearchResults
           id={book.id}
