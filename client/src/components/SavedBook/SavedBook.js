@@ -1,5 +1,5 @@
 import React from "react";
-import API from '../../utils/API'
+import API from "../../utils/API";
 
 const SavedBook = (props) => {
   const handleView = (event) => {
@@ -8,16 +8,23 @@ const SavedBook = (props) => {
   };
   const handleDelete = (event) => {
     event.preventDefault();
-    API.deleteBook(props.id)
-  }
+    const deleteConfirm = window.confirm("Are you sure you want to delete this book?");
+    if (deleteConfirm) {
+      API.deleteBook(props.id);
+    }
+  };
   return (
     <div className="container">
       <h3>{props.title}</h3>
       <h4>{props.author}</h4>
       <img src={props.image} alt={props.title} />
       <p>{props.description}</p>
-      <button className="view" onClick={handleView}>View</button>
-      <button className="save" onClick={handleDelete}>Delete</button>
+      <button className="view" onClick={handleView}>
+        View
+      </button>
+      <button className="save" onClick={handleDelete}>
+        Delete
+      </button>
     </div>
   );
 };
