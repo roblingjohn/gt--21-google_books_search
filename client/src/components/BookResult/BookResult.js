@@ -18,9 +18,8 @@ const BookResult = (props) => {
       image: props.image,
       link: props.link,
     })
-      .then((res) => {
-        console.log(res);
-        res.json();
+      .then(() => {
+        console.log("Book saved!");
       })
       .catch((err) => console.log(err));
   };
