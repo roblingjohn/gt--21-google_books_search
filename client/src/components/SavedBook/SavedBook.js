@@ -8,7 +8,9 @@ const SavedBook = (props) => {
   };
   const handleDelete = (event) => {
     event.preventDefault();
-    const deleteConfirm = window.confirm("Are you sure you want to delete this book?");
+    const deleteConfirm = window.confirm(
+      "Are you sure you want to delete this book?"
+    );
     if (deleteConfirm) {
       API.deleteBook(props.id);
       window.location.reload();
