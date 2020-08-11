@@ -3,7 +3,7 @@ import BookResult from "../BookResult/BookResult";
 
 const SearchResults = (props) => {
   return (
-    <div className="container">
+    <div>
       <BookResult
         key={props.id}
         title={props.title}

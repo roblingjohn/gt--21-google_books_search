@@ -24,11 +24,13 @@ const Search = () => {
     <div>
       <div className="container">
         <h2>Book Search</h2>
-        <div>
+        <div className="row">
+          <div className="col s5">
           <form id="bookSearch" onSubmit={handleSubmit}>
             <input type="text" name="book" placeholder="Book Name" />
             <button id="searchBtn">Search</button>
           </form>
+          </div>
         </div>
       </div>
       <div className="container">

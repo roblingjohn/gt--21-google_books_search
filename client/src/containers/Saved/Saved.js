@@ -18,7 +18,7 @@ const Saved = () => {
           key={book.id}
           id={book._id}
           title={book.title}
-          author={book.authors}
+          author={book.author}
           image={book.image}
           description={book.description}
           link={book.link}

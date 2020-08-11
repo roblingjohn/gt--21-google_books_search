@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(253, 253, 145);
 }
 
 code {
@@ -16,4 +17,18 @@ code {
   border-width: 1px;
   border-color: black;
   border-style: solid;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: whitesmoke
+}
+
+.bookResult {
+  background-color: white;
+}
+
+button {
+  border-radius: 5px;
+  background-color: red;
+  color: white;
 }

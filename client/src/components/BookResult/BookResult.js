@@ -17,23 +17,33 @@ const BookResult = (props) => {
       link: props.link,
     })
       .then(() => {
-        console.log("Book saved!");
+        alert("Book saved!");
       })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="container">
-      <h3>{props.title}</h3>
-      <h4>{props.author}</h4>
-      <img src={props.image} alt={props.title} />
-      <p>{props.description}</p>
-      <button className="view" id={props.id} onClick={handleView}>
-        View
-      </button>
-      <button className="save" id={props.id} onClick={handleSave}>
-        Save
-      </button>
+    <div className="container bookResult">
+      <div className="row">
+        <div className="col s12">
+          <h3>{props.title}</h3>
+          <h4>{props.author}</h4>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col s3">
+          <img src={props.image} alt={props.title} />
+        </div>
+        <div className="col s9">
+          <p>{props.description}</p>
+          <button className="view" id={props.id} onClick={handleView}>
+            View
+          </button>
+          <button className="save" id={props.id} onClick={handleSave}>
+            Save
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
