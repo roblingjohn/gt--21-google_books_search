@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import SearchResults from "../../components/SearchResults/SearchResults";
+import API from '../../utils/API'
 
 const Search = () => {
-  const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
   const [books, setBooks] = useState([]);
   //   useEffect(() => {
   //     setBooks({
@@ -14,10 +14,7 @@ const Search = () => {
   function handleSubmit(event) {
     event.preventDefault();
     let searchTerm = event.target.book.value;
-    axios
-      .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}:keyes&key=${API_KEY}`
-      )
+    API.searchBooks(searchTerm)
       .then((res) => {
         setBooks(res.data.items);
       });
