@@ -20,9 +20,9 @@ app.get("/api/config", (req, res) => {
 
 app.use("/api", booksController);
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/google_books_search", {
