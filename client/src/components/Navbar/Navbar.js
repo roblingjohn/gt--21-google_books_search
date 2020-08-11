@@ -1,10 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div>
-        <h1>Google Books || <Link to='/search'>Search</Link> |  <Link to='/saved'>Saved</Link></h1>
+      <nav>
+        <div class="nav-wrapper" id="navbar">
+          <Link to="/" id="navbarLogo">Google Books Search</Link>
+          <ul id="nav-mobile" class="right">
+            <li>
+              <Link to="/search">Search</Link>
+            </li>
+            <li>
+              <Link to="/saved">Saved</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
   );
 };
