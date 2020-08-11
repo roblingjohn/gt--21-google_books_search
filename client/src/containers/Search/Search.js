@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import SearchResults from "../../components/SearchResults/SearchResults";
 import API from '../../utils/API'
 
 const Search = () => {
   const [books, setBooks] = useState([]);
-  //   useEffect(() => {
-  //     setBooks({
-  //       title: "Test",
-  //     });
-  //   }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
