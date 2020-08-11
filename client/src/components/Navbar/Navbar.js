@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
     <div>
       <nav>
-        <div class="nav-wrapper" id="navbar">
+        <div className="nav-wrapper" id="navbar">
           <Link to="/" id="navbarLogo">Google Books Search</Link>
-          <ul id="nav-mobile" class="right">
+          <ul id="nav-mobile" className="right">
             <li>
               <Link to="/search">Search</Link>
             </li>

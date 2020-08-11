@@ -2,13 +2,9 @@ import axios from "axios";
 const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 export default {
-  // Gets all books
+  // Gets all saved books
   getBooks: function () {
     return axios.get("/api/books");
-  },
-  // Gets the book with the given id
-  getBook: function (id) {
-    return axios.get("/api/books/" + id);
   },
   // Deletes the book with the given id
   deleteBook: function (id) {

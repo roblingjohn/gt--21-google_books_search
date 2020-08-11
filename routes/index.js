@@ -1,6 +1,5 @@
 const path = require("path");
 const router = require("express").Router();
-const apiRoutes = require("./api");
 
 // API Routes
 router.route("/api/books")
@@ -9,8 +8,6 @@ router.route("/api/books")
 
   router
   .route("/books/:id")
-  // .get(booksController.findById)
-  // .put(booksController.update)
   .delete(booksController.remove);
 
 // If no API routes are hit, send the React app
