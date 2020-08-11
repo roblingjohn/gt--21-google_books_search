@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 import SavedBook from "../../components/SavedBook/SavedBook";
-// import axios from "axios";
 import API from "../../utils/API";
 
 const Saved = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
     API.getBooks().then((res) => {
-      console.log(res.data);
       setBooks(res.data);
     });
   }, []);
+
   return (
     <div className="container">
       <h2>Saved Books</h2>
       {books.map((book) => (
         <SavedBook
-          id={book.id}
+          key={book.id}
+          id={book._id}
           title={book.title}
           author={book.authors}
           image={book.image}

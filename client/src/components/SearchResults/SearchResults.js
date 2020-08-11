@@ -5,6 +5,7 @@ const SearchResults = (props) => {
   return (
     <div className="container">
       <BookResult
+        key={props.id}
         title={props.title}
         author={props.author}
         image={props.image}

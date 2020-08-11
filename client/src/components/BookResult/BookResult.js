@@ -1,7 +1,5 @@
 import React from "react";
 import API from "../../utils/API";
-import Link from "react-router-dom";
-import axios from "axios";
 
 const BookResult = (props) => {
   const handleView = (event) => {
@@ -18,9 +16,8 @@ const BookResult = (props) => {
       image: props.image,
       link: props.link,
     })
-      .then((res) => {
-        console.log(res);
-        res.json();
+      .then(() => {
+        console.log("Book saved!");
       })
       .catch((err) => console.log(err));
   };
