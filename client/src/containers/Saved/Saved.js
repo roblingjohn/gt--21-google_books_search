@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SavedBook from "../../components/SavedBook/SavedBook";
-// import axios from "axios";
 import API from "../../utils/API";
 
 const Saved = () => {

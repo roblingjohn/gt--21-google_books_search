@@ -16,9 +16,9 @@ function App() {
   });
   return (
     <div>
-      <Navbar />
-      <Jumbotron />
       <Router>
+        <Navbar />
+        <Jumbotron />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Home} />

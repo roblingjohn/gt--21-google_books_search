@@ -24,7 +24,7 @@ const Search = () => {
   }
 
   return (
-    <div className="container">
+    <div>
       <div className="container">
         <h2>Book Search</h2>
         <div>
@@ -34,17 +34,19 @@ const Search = () => {
           </form>
         </div>
       </div>
-      <h3>Results</h3>
-      {books.map((book) => (
-        <SearchResults
-          id={book.id}
-          title={book.volumeInfo.title}
-          author={book.volumeInfo.authors}
-          image={book.volumeInfo.imageLinks.thumbnail}
-          description={book.volumeInfo.description}
-          link={book.accessInfo.webReaderLink}
-        />
-      ))}
+      <div className="container">
+        <h3>Results</h3>
+        {books.map((book) => (
+          <SearchResults
+            id={book.id}
+            title={book.volumeInfo.title}
+            author={book.volumeInfo.authors}
+            image={book.volumeInfo.imageLinks.thumbnail}
+            description={book.volumeInfo.description}
+            link={book.accessInfo.webReaderLink}
+          />
+        ))}
+      </div>
     </div>
   );
 };
