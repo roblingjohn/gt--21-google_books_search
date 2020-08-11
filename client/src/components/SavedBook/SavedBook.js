@@ -13,7 +13,7 @@ const SavedBook = (props) => {
     );
     if (deleteConfirm) {
       API.deleteBook(props.id);
-      window.location.reload();
+      window.location.assign("/saved");
     }
   };
   return (
