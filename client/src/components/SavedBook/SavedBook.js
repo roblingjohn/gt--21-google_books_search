@@ -34,7 +34,7 @@ const SavedBook = (props) => {
             View
           </button>
           <button className="delete" id={props.id} onClick={handleDelete}>
-            Save
+            Delete
           </button>
         </div>
       </div>
